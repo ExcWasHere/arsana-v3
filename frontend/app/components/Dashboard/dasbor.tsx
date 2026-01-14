@@ -13,8 +13,8 @@ const DesktopSidebar = ({ isOpen }: { isOpen: boolean }) => {
 
   useEffect(() => {
     const sampleUser = {
-      name: 'Budi Santoso',
-      email: 'budi@example.com',
+      name: 'Arsana Polinema',
+      email: 'arsanapolinema@gmail.com',
       role: 'siswa',
       isLoggedIn: true
     };
@@ -31,13 +31,13 @@ const DesktopSidebar = ({ isOpen }: { isOpen: boolean }) => {
 
   return (
     <div 
-      className={`fixed left-0 top-0 h-screen bg-gradient-to-b from-cyan-50 to-teal-50 border-r border-cyan-200 p-5 flex flex-col z-50 transition-transform duration-300 w-56 ${
+      className={`fixed left-0 top-0 h-screen bg-linear-to-b from-cyan-50 to-teal-50 border-r border-cyan-200 p-5 flex flex-col z-50 transition-transform duration-300 w-56 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
       style={{ fontFamily: 'Inter, sans-serif' }}
     >
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-11 h-11 shrink-0 rounded-full bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center text-white text-xl font-bold shadow-lg">
+        <div className="w-11 h-11 shrink-0 rounded-full bg-linear-to-br from-cyan-500 to-teal-500 flex items-center justify-center text-white text-xl font-bold shadow-lg">
           {user?.name?.charAt(0).toUpperCase() || 'A'}
         </div>
         <div className="overflow-hidden">
