@@ -50,8 +50,8 @@ export default function IndexFeatures() {
             },
             {
               id: 3,
-              title: "Pendampingan Berbasis AI",
-              desc: "AI menyesuaikan materi sesuai kemampuan siswa dan memberi feedback real-time.",
+              title: "Pendampingan Belajar Berbasis AI",
+              desc: "AI membantu siswa untuk mendeteksi tingkat pemahaman mereka dan memberi feedback secara real-time.",
             },
           ].map((item) => (
             <div
