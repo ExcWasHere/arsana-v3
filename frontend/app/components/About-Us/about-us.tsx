@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const sponsors = [
-  { id: 1, name: "KemenPPPA", logo: "../public/logitech.svg" },
-  { id: 2, name: "BPS", logo: "../public/otsukah.svg" },
-  { id: 3, name: "UNICEF", logo: "../public/logitech.svg" },
-  { id: 4, name: "Kemenkes", logo: "../public/otsukah.svg" },
+  { id: 1, name: "KemenPPPA", logo: "/logitech.svg" },
+  { id: 2, name: "BPS", logo: "/otsukah.svg" },
+  { id: 3, name: "UNICEF", logo: "/logitech.svg" },
+  { id: 4, name: "Kemenkes", logo: "/otsukah.svg" },
 ];
 
 export default function AboutUs() {

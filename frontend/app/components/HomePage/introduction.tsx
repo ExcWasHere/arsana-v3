@@ -38,7 +38,7 @@ export default function IndexHero() {
               <div className="relative w-full max-w-xl">
                 <div className="relative p-6 md:p-10 rounded-3xl overflow-hidden">
                   <img
-                    src="../public/Group.png" 
+                    src="/Group.png" 
                     alt="Ilustrasi Utama Arsana"
                     className="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-500"
                   />
