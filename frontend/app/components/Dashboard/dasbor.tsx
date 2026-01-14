@@ -91,8 +91,8 @@ const MobileSidebar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 
   useEffect(() => {
     const sampleUser = {
-      name: 'Budi Santoso',
-      email: 'budi@example.com',
+      name: 'Arsana Polinema',
+      email: 'arsanapolinema@gmail.com',
       role: 'siswa',
       isLoggedIn: true
     };
@@ -219,8 +219,8 @@ export default function ArsanaDashboard() {
 
   useEffect(() => {
     const sampleUser = {
-      name: 'Budi Santoso',
-      email: 'budi@example.com',
+      name: 'Arsana Polinema',
+      email: 'arsanapolinema@gmail.com',
       role: 'siswa',
       isLoggedIn: true
     };
