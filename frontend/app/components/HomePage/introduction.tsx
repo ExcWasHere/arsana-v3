@@ -1,44 +1,77 @@
 export default function IndexHero() {
   return (
     <div className="relative w-full overflow-hidden">
-      <div
-        className="relative w-full overflow-hidden pt-32 pb-16"
+
+      {/* ================= MOBILE VIEW ================= */}
+      <section className="lg:hidden pt-28 pb-20 px-6 text-center">
+        <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
+          <span className="text-gray-900">Hai Kenalin!</span>
+          <br />
+          <span className="text-gray-900">Aku </span>
+          <span className="inline-block font-bold arsanaText">
+            Arsana
+          </span>
+        </h1>
+
+        <p className="mt-6 text-xl leading-relaxed italic text-gray-700">
+          Platform Pembelajaran Digital
+          <br />
+          Untuk Sahabat Tunarungu
+        </p>
+
+        <div className="mt-10 flex justify-center">
+          <button className="px-10 py-5 bg-linear-to-r from-cyan-400 to-teal-400 text-white font-bold rounded-full shadow-lg active:scale-95 transition">
+            Kepoin Arsana Yuk!
+          </button>
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <img
+            src="/Group.png"
+            alt="Ilustrasi Utama Arsana"
+            className="w-full max-w-sm object-contain"
+          />
+        </div>
+      </section>
+
+      {/* ================= DESKTOP VIEW ================= */}
+      <section
+        className="hidden lg:block pt-32 pb-16"
         style={{ minHeight: "90vh" }}
       >
-        {/* Main Container */}
         <div className="relative max-w-360 mx-auto px-8 md:px-16 lg:px-24 xl:px-32 h-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[70vh]">
-            <div className="flex flex-col justify-center space-y-8">
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
-                  <span className="text-gray-900">Hai Kenalin!</span>
-                  <br />
-                  <span className="text-gray-900">Aku </span>
-                  <span className="inline-block font-bold arsanaText">
-                    Arsana
-                  </span>
-                </h1>
-              </div>
 
-              <p className="text-gray-700 text-lg lg:text-2xl leading-relaxed max-w-lg font-light italic">
+            {/* TEXT */}
+            <div className="flex flex-col justify-center space-y-8">
+              <h1 className="text-7xl font-bold leading-tight tracking-tight">
+                <span className="text-gray-900">Hai Kenalin!</span>
+                <br />
+                <span className="text-gray-900">Aku </span>
+                <span className="inline-block font-bold arsanaText">
+                  Arsana
+                </span>
+              </h1>
+
+              <p className="text-gray-700 text-2xl leading-relaxed max-w-lg font-light italic">
                 Platform Pembelajaran Digital
                 <br />
                 Untuk Sahabat Tunarungu
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-10 py-5 bg-linear-to-r from-cyan-400 to-teal-400 text-white font-bold rounded-full shadow-lg hover:shadow-cyan-200/50 transform hover:scale-105 transition-all duration-300">
+              <div>
+                <button className="px-12 py-5 bg-linear-to-r from-cyan-400 to-teal-400 text-white font-bold rounded-full shadow-lg hover:shadow-cyan-200/50 transform hover:scale-105 transition-all duration-300">
                   Kepoin Arsana Lebih Dalam Yuk!
                 </button>
               </div>
             </div>
 
-         
+            {/* IMAGE */}
             <div className="relative flex items-center justify-center">
               <div className="relative w-full max-w-xl">
-                <div className="relative p-6 md:p-10 rounded-3xl overflow-hidden">
+                <div className="relative p-10 rounded-3xl overflow-hidden">
                   <img
-                    src="/Group.png" 
+                    src="/Group.png"
                     alt="Ilustrasi Utama Arsana"
                     className="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-500"
                   />
@@ -50,8 +83,9 @@ export default function IndexHero() {
 
           </div>
         </div>
-      </div>
+      </section>
 
+      {/* ================= STYLE ================= */}
       <style>{`
         .arsanaText {
           opacity: 0;

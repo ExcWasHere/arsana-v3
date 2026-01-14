@@ -104,7 +104,7 @@ const Navbar: React.FC<HeaderProps> = () => {
           }`}
       >
         {/* Logo */}
-        <h1 className="text-xl md:text-2xl font-bold transition-all duration-300 hover:scale-105 bg-linear-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+        <h1 className="invisible md:visible text-xl md:text-2xl font-bold transition-all duration-300 hover:scale-105 bg-linear-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
           Ar
           <span className="bg-linear-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
             sana
