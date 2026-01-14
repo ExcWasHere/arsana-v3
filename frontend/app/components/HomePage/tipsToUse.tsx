@@ -1,11 +1,7 @@
 export default function IndexTips() {
   return (
-    <section className="relative min-h-[80vh] bg-white overflow-hidden py-24 lg:py-32">
-      <div className="absolute top-0 right-0 w-125 h-125 bg-cyan-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-125 h-125 bg-teal-50 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-
+    <section className="relative min-h-[80vh] overflow-hidden py-24 lg:py-32">
       <div className="container mx-auto px-8 md:px-16 lg:px-24 xl:px-32 max-w-360 relative z-10">
-
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-sm font-bold tracking-widest text-cyan-600 uppercase mb-4">
             Panduan Pengguna

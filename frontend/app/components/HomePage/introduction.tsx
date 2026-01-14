@@ -1,9 +1,6 @@
 export default function IndexHero() {
   return (
-    <div className="relative w-full bg-white overflow-hidden">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-150 h-150 bg-cyan-50/50 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-150 h-150 bg-teal-50/50 rounded-full blur-3xl opacity-40 translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+    <div className="relative w-full overflow-hidden">
       <div
         className="relative w-full overflow-hidden pt-32 pb-16"
         style={{ minHeight: "90vh" }}
@@ -39,7 +36,7 @@ export default function IndexHero() {
          
             <div className="relative flex items-center justify-center">
               <div className="relative w-full max-w-xl">
-                <div className="relative bg-white p-6 md:p-10 rounded-3xl overflow-hidden">
+                <div className="relative p-6 md:p-10 rounded-3xl overflow-hidden">
                   <img
                     src="../public/Group.png" 
                     alt="Ilustrasi Utama Arsana"

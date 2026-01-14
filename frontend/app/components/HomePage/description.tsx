@@ -1,12 +1,7 @@
 export default function IndexFeatures() {
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden py-24 lg:py-32">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-125 h-125 bg-cyan-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-125 h-125 bg-teal-50 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
-
+    <section className="relative min-h-screen overflow-hidden py-24 lg:py-32">
       <div className="container mx-auto px-8 md:px-16 lg:px-24 xl:px-32 max-w-360 relative z-10">
-
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row items-end justify-between gap-10 mb-20 lg:mb-32">
           <div className="lg:w-2/3">

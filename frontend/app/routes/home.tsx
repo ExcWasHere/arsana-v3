@@ -7,19 +7,22 @@ import Navbar from "~/common/navbar";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "BeParent | Home" },
-    { name: "Home", content: "Welcome to BeParent!" },
+    { title: "Arsana | Home" },
+    { name: "Home", content: "Welcome to Arsana!" },
   ];
 }
 
 export default function Home() {
   return (
-    <>
+    <div
+      className="relative min-h-screen overflow-hidden bg-no-repeat bg-cover bg-center"
+      style={{ backgroundImage: "url('/latar-belakang.svg')" }}
+    >
       <Navbar />
       <IndexHero />
       <IndexFeatures />
       <IndexIntroduction />
       <Footer />
-    </>
+    </div>
   );
 }

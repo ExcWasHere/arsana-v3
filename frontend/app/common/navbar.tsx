@@ -100,7 +100,7 @@ const Navbar: React.FC<HeaderProps> = () => {
           ${
             isScrolled || isMobileMenuOpen
               ? "bg-white shadow-xl"
-              : "bg-white shadow-lg"
+              : "bg-transparent shadow-lg"
           }`}
       >
         {/* Logo */}
