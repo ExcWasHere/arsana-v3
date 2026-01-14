@@ -29,7 +29,7 @@ export default function AboutUs() {
         backgroundImage: "url('/latar-belakang.svg')",
       }}
     >
-      <div className="relative max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24 xl:px-32 z-10 pb-24">
+      <div className="relative max-w-360 mx-auto px-8 md:px-16 lg:px-24 xl:px-32 z-10 pb-24">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,7 +61,7 @@ export default function AboutUs() {
               <img
                 src="/Tangan.png"
                 alt="Visi Arsana"
-                className="relative w-full h-[400px] object-cover rounded-[2.5rem] shadow-2xl transform transition-transform duration-500 group-hover:scale-[1.01] bg-white"
+                className="relative w-full h-100 object-cover rounded-[2.5rem] shadow-2xl transform transition-transform duration-500 group-hover:scale-[1.01] bg-white"
               />
             </motion.div>
 
@@ -115,7 +115,7 @@ export default function AboutUs() {
                   viewport={{ once: true }}
                   className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-cyan-200 transition-all duration-300 group h-full"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-100 to-teal-50 text-cyan-600 flex items-center justify-center font-bold text-xl group-hover:from-cyan-500 group-hover:to-teal-500 group-hover:text-white transition-all duration-300 shadow-sm">
+                  <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-cyan-100 to-teal-50 text-cyan-600 flex items-center justify-center font-bold text-xl group-hover:from-cyan-500 group-hover:to-teal-500 group-hover:text-white transition-all duration-300 shadow-sm">
                     {index + 1}
                   </div>
                   <div>
@@ -165,7 +165,7 @@ export default function AboutUs() {
                 {items.map((sponsor, i) => (
                   <div
                     key={i}
-                    className="flex-shrink-0 w-1/4 flex justify-center px-4 sm:px-8"
+                    className="shrink-0 w-1/4 flex justify-center px-4 sm:px-8"
                   >
                     <img
                       src={sponsor.logo}

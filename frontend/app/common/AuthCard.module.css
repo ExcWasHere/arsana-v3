@@ -1,0 +1,242 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/latar-belakang.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Inter', sans-serif;
+  color: #4b5679;
+  position: relative;
+}
+
+
+/* BACK BUTTON */
+.back {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2d3748;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.back:hover {
+  color: #06b6d4; /* cyan */
+  box-shadow: 0 10px 24px rgba(6, 182, 212, 0.25);
+}
+
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 780px;
+  height: 550px;
+  border-radius: 20px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* SLIDING BACKGROUND */
+.bg {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 50%;
+  background: linear-gradient(135deg, #06b6d4, #14b8a6); /* cyan → teal */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg.signin {
+  transform: translateX(100%);
+}
+
+/* HERO & FORM BASE */
+.hero,
+.form {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* HERO */
+.hero {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #ffffff;
+  padding: 0 40px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.hero.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hero.signup {
+  transform: translateX(-20%);
+}
+
+.hero.signup.active {
+  transform: translateX(0);
+}
+
+.hero.signin {
+  left: 50%;
+  transform: translateX(20%);
+}
+
+.hero.signin.active {
+  transform: translateX(0);
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.hero button {
+  margin-top: 10px;
+  padding: 12px 45px;
+  border-radius: 30px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* FORM */
+.form {
+  background: #ffffff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  opacity: 0;
+}
+
+.form.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.form.signup {
+  left: 50%;
+  transform: translateX(-100%);
+}
+
+.form.signup.active {
+  transform: translateX(0);
+}
+
+.form.signin {
+  transform: translateX(100%);
+}
+
+.form.signin.active {
+  transform: translateX(0);
+}
+
+.form h2 {
+  font-size: 28px;
+  color: #2d3748;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.form p {
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: #718096;
+}
+
+/* FORM ELEMENTS */
+.form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input,
+.form select {
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f7fafc;
+  padding: 12px 16px;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #06b6d4;
+  background: #ffffff;
+}
+
+/* PASSWORD */
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* BUTTON */
+.form button {
+  margin-top: 5px;
+  border: 0;
+  padding: 14px 0;
+  border-radius: 12px;
+  width: 100%;
+  background: linear-gradient(135deg, #06b6d4, #14b8a6);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
+}
+
+.form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ERROR */
+.error {
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #c33;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
