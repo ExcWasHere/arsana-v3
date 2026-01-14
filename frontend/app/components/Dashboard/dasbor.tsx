@@ -86,7 +86,6 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   );
 };
 
-// Main Dashboard Component
 export default function ArsanaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedClass, setSelectedClass] = useState('Kelas 5 SD');
