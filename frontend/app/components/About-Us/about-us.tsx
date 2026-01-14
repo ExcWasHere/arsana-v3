@@ -27,10 +27,7 @@ export default function AboutUs() {
     if (!container) return;
 
     const interval = setInterval(() => {
-      container.scrollBy({
-        left: 200,
-        behavior: "smooth",
-      });
+      container.scrollBy({ left: 200, behavior: "smooth" });
 
       if (
         container.scrollLeft + container.clientWidth >=
@@ -48,10 +45,17 @@ export default function AboutUs() {
       className="relative min-h-screen overflow-hidden bg-no-repeat bg-cover bg-center"
       style={{ backgroundImage: "url('/latar-belakang.svg')" }}
     >
-      {/* ================= MOBILE VIEW (BARU) ================= */}
-      <div className="lg:hidden px-6 pt-32 pb-20 space-y-20 z-10 relative">
+      {/* MOBILE VIEW */}
+      <div className="lg:hidden px-6 pt-32 pb-20 space-y-20 relative z-10">
+
         {/* Hero */}
-        <div className="text-center space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center space-y-6"
+        >
           <h1 className="text-4xl font-bold">
             Tentang <span className="text-cyan-500">Arsana</span>
           </h1>
@@ -59,30 +63,54 @@ export default function AboutUs() {
             Solusi cerdas berbasis AI untuk mendampingi sahabat tunarungu dalam
             memaksimalkan pembelajaran mereka.
           </p>
-        </div>
+        </motion.div>
 
         {/* Visi */}
         <div className="space-y-6">
-          <img
+          <motion.img
             src="/Tangan.png"
             alt="Visi Arsana"
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             className="w-full rounded-3xl shadow-xl bg-white"
           />
-          <h2 className="text-3xl font-bold">
+
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold"
+          >
             Visi <span className="text-cyan-500">Arsana</span>
-          </h2>
-          <p className="text-gray-600 leading-relaxed">
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-gray-600 leading-relaxed"
+          >
             Menjadi platform pembelajaran digital inklusif terdepan di Indonesia
             yang menghadirkan pengalaman belajar adil, menyenangkan, dan mudah
             diakses bagi penyandang tunarungu.
-          </p>
+          </motion.p>
         </div>
 
         {/* Misi */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-center"
+          >
             Misi <span className="text-cyan-500">Arsana</span>
-          </h2>
+          </motion.h2>
 
           {[
             "Menyediakan platform pembelajaran digital yang ramah tunarungu melalui pendekatan visual, teks terjemahan, dan dukungan bahasa isyarat yang mudah dipahami.",
@@ -90,19 +118,30 @@ export default function AboutUs() {
             "Memanfaatkan teknologi AI untuk menghadirkan pembelajaran yang adaptif, personal, dan sesuai dengan kebutuhan unik setiap siswa tunarungu.",
             "Memperluas akses pendidikan yang setara dengan memanfaatkan teknologi digital sehingga materi pembelajaran dapat diakses kapan saja dan di mana saja.",
           ].map((item, i) => (
-            <div
+            <motion.div
               key={i}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              viewport={{ once: true }}
               className="p-6 rounded-2xl bg-white border border-gray-100 shadow-md"
             >
               <h4 className="font-bold text-lg mb-2">Misi {i + 1}</h4>
               <p className="text-gray-600 leading-relaxed">{item}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Partner */}
-        <div className="space-y-6">
+        {/* Media Partner */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
           <h2 className="text-2xl font-bold">Media Partner</h2>
+
           <div
             ref={partnerRef}
             className="flex gap-8 overflow-x-auto pb-4 scroll-smooth scrollbar-hide"
@@ -116,10 +155,10 @@ export default function AboutUs() {
               />
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      {/* ================= DESKTOP VIEW (KODE ASLI, TIDAK DIUBAH) ================= */}
+      {/* DESKTOP VIEW */}
       <div className="hidden lg:block relative z-10">
         <div className="relative max-w-360 mx-auto px-8 md:px-16 lg:px-24 xl:px-32 z-10 pb-24">
           {/* Hero Section */}

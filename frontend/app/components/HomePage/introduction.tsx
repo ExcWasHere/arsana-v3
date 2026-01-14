@@ -2,7 +2,7 @@ export default function IndexHero() {
   return (
     <div className="relative w-full overflow-hidden">
 
-      {/* ================= MOBILE VIEW ================= */}
+      {/* MOBILE VIEW */}
       <section className="lg:hidden pt-28 pb-20 px-6 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
           <span className="text-gray-900">Hai Kenalin!</span>
@@ -34,7 +34,7 @@ export default function IndexHero() {
         </div>
       </section>
 
-      {/* ================= DESKTOP VIEW ================= */}
+      {/* DESKTOP VIEW */}
       <section
         className="hidden lg:block pt-32 pb-16"
         style={{ minHeight: "90vh" }}
@@ -85,7 +85,7 @@ export default function IndexHero() {
         </div>
       </section>
 
-      {/* ================= STYLE ================= */}
+      {/* STYLE */}
       <style>{`
         .arsanaText {
           opacity: 0;

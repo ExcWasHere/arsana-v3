@@ -2,7 +2,7 @@ export default function IndexTips() {
   return (
     <section className="relative overflow-hidden">
 
-      {/* ================= MOBILE VIEW ================= */}
+      {/* MOBILE VIEW */}
       <div className="lg:hidden py-20 px-6 space-y-16">
 
         {/* Header */}
@@ -56,7 +56,7 @@ export default function IndexTips() {
         </div>
       </div>
 
-      {/* ================= DESKTOP VIEW ================= */}
+      {/* DESKTOP VIEW */}
       <div className="hidden lg:block py-32">
         <div className="container mx-auto px-8 md:px-16 lg:px-24 xl:px-32 max-w-360">
 
